@@ -1,0 +1,493 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/Titillium-Regular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+radius = 1.2
+height = 9.0
+
+[sub_resource type="BoxShape" id=2]
+
+extents = Vector3( 0.8, 0.2, 0.8 )
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "Idle_unarmed"
+length = 0.0416667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "Knife_equip"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "Knife_fire"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "Knife_idle"
+length = 0.0416667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=7]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=8]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=9]
+
+length = 0.666667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=10]
+
+length = 0.0416667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=11]
+
+length = 2.41667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2.41667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=12]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=13]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=14]
+
+length = 0.666667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=15]
+
+length = 0.0416667
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=16]
+
+length = 3.125
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 3.125, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=17]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="SphereMesh" id=18]
+
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+radius = 1.0
+height = 2.0
+radial_segments = 64
+rings = 32
+is_hemisphere = false
+
+[sub_resource type="DynamicFont" id=19]
+
+size = 42
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Settings" ]
+
+[node name="Player" type="KinematicBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Body_CollisionShape" type="CollisionShape" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, -1.62921e-007, -1, 0, 1, -1.62921e-007, 0, 5.81098, 0 )
+shape = SubResource( 1 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Feet_CollisionShape" type="CollisionShape" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.493176, 0 )
+shape = SubResource( 2 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Rotation_Helper" type="Spatial" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.239, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Model" type="Spatial" parent="Rotation_Helper" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.405, 0 )
+
+[node name="Armature" type="Spatial" parent="Rotation_Helper/Model" index="0"]
+
+[node name="Animation_Player" type="AnimationPlayer" parent="Rotation_Helper/Model" index="1"]
+
+root_node = NodePath("..")
+autoplay = "Idle_unarmed"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Idle_unarmed = SubResource( 3 )
+anims/Knife_equip = SubResource( 4 )
+anims/Knife_fire = SubResource( 5 )
+anims/Knife_idle = SubResource( 6 )
+anims/Knife_unequip = SubResource( 7 )
+anims/Pistol_equip = SubResource( 8 )
+anims/Pistol_fire = SubResource( 9 )
+anims/Pistol_idle = SubResource( 10 )
+anims/Pistol_reload = SubResource( 11 )
+anims/Pistol_unequip = SubResource( 12 )
+anims/Rifle_equip = SubResource( 13 )
+anims/Rifle_fire = SubResource( 14 )
+anims/Rifle_idle = SubResource( 15 )
+anims/Rifle_reload = SubResource( 16 )
+anims/Rifle_unequip = SubResource( 17 )
+blend_times = [  ]
+
+[node name="Camera" type="Camera" parent="Rotation_Helper" index="1"]
+
+transform = Transform( -1, 0, 3.25841e-007, 0, 1, 0, -3.25841e-007, 0, -1, 0, -0.307539, -0.0646362 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 90.0
+size = 1.0
+near = 0.05
+far = 180.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Gun_Aim_Point" type="Spatial" parent="Rotation_Helper" index="2"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.307539, 20.0487 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="Rotation_Helper/Gun_Aim_Point" index="0"]
+
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 18 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="HUD" type="Control" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Crosshair" type="Control" parent="HUD" index="0"]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0.705882 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -21.0
+margin_top = -21.0
+margin_right = 21.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Bottom_IMG" type="TextureRect" parent="HUD/Crosshair" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = 4.5
+margin_right = 2.5
+margin_bottom = 20.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Top_IMG" type="TextureRect" parent="HUD/Crosshair" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -20.5
+margin_right = 2.5
+margin_bottom = -4.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Left_IMG" type="TextureRect" parent="HUD/Crosshair" index="2"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4.5
+margin_top = -2.5
+margin_right = 0.5
+margin_bottom = 12.5
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Right_IMG" type="TextureRect" parent="HUD/Crosshair" index="3"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 19.5
+margin_top = -2.5
+margin_right = 24.5
+margin_bottom = 12.5
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Death_Screen" type="ColorRect" parent="HUD" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.140625, 0.140625, 0.140625, 0.901961 )
+
+[node name="Label" type="Label" parent="HUD/Death_Screen" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 19 )
+text = "You died
+0.00 seconds till respawn"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+
