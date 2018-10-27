@@ -9,7 +9,7 @@ void AIEmotion::normalizeEmotions(){
 	total	= fabs(joy_sadness) + fabs(trust_disgust) + fabs(fear_anger) + fabs(surprise_anticipation);
 	if(total > 19.7d){
 		//normalization needed
-		double ratio = total / 19.7d;
+		double ratio = 19.7d / total;
 		joy_sadness *= ratio;
 		trust_disgust *= ratio;
 		fear_anger *= ratio;
