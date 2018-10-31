@@ -4,8 +4,8 @@
 
 #include "reference.h"
 
-class AIEmotion : public Reference { 
-		GDCLASS(AIEmotion, Reference);
+class AIEmotion : public Object { 
+		GDCLASS(AIEmotion, Object);
 	
 	protected:
 		static void _bind_methods();
@@ -19,6 +19,9 @@ class AIEmotion : public Reference {
 		int addAnger(double angVal);
 		int addSurprise(double surpVal);
 		int addAnticipation(double anticVal);
+		
+		//blank func for registering
+		void setNothing();
 		
 		//getter functions
 		double getJoySad(){return joy_sadness;}

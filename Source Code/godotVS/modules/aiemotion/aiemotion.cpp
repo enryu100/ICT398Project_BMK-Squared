@@ -180,3 +180,24 @@ AIEmotion::AIEmotion(double joy, double trust, double fear, double surprise, dou
 	emotion_threshold = 5.0d;
 	decay_rate = 0.05d;
 }
+
+static void AIEmotion::_bind_methods(){
+	ClassDB::register_method(D_METHOD("addJoy", "joyVal"), &addJoy);
+	ClassDB::register_method(D_METHOD("addSad", "sadVal"), &addSad);
+	ClassDB::register_method(D_METHOD("addTrust", "trustVal"), &addTrust);
+	ClassDB::register_method(D_METHOD("addDisgust", "disgVal"), &addDisgust);
+	ClassDB::register_method(D_METHOD("addFear", "fearVal"), &addFear);
+	ClassDB::register_method(D_METHOD("addAnger", "angVal"), &addAnger);
+	ClassDB::register_method(D_METHOD("addSurprise", "surpVal"), &addSurprise);
+	ClassDB::register_method(D_METHOD("addAnticipation", "anticVal"), &addAnticipation);
+	ClassDB::register_method(D_METHOD("AIEmotion","joy", "trust", "fear", "surprise", "joy_m", "trust_m", "fear_m", "surprise_m", "sadness_m", "disgust_m", "anger_m", "anticipation_m"), &AIEmotion);
+	ClassDB::register_method(D_METHOD("AIEmotion"), &AIEmotion);
+	ADD_PROPERTY(PropertyInfo(Variant::double, "joy_sadness"), "setNothing","getJoySad");
+	ADD_PROPERTY(PropertyInfo(Variant::double, "trust_disgust"), "setNothing","getTrustDisgust");
+	ADD_PROPERTY(PropertyInfo(Variant::double, "fear_anger"), "setNothing","getFearAnger");
+	ADD_PROPERTY(PropertyInfo(Variant::double, "surprise_anticipation"), "setNothing","getSurpriseAnticipation");
+}
+
+void AIEmotion::setNothing(){
+	//do nothing
+}
