@@ -190,6 +190,8 @@ static void AIEmotion::_bind_methods(){
 	ClassDB::register_method(D_METHOD("addAnger", "angVal"), &addAnger);
 	ClassDB::register_method(D_METHOD("addSurprise", "surpVal"), &addSurprise);
 	ClassDB::register_method(D_METHOD("addAnticipation", "anticVal"), &addAnticipation);
+	ClassDB::register_method(D_METHOD("setEmotionLevels", "joy", "trust", "fear", "surprise"), &setEmotionLevels);
+	ClassDB::register_method(D_METHOD("setAgentModifiers","joy_m", "sadness_m", "trust_m", "disgust_m", "fear_m", "anger_m", "surprise_m", "anticipation_m"), &setAgentModifiers);
 	ClassDB::register_method(D_METHOD("AIEmotion","joy", "trust", "fear", "surprise", "joy_m", "trust_m", "fear_m", "surprise_m", "sadness_m", "disgust_m", "anger_m", "anticipation_m"), &AIEmotion);
 	ClassDB::register_method(D_METHOD("AIEmotion"), &AIEmotion);
 	ADD_PROPERTY(PropertyInfo(Variant::double, "joy_sadness"), "setNothing","getJoySad");
