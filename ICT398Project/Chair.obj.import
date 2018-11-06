@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Chair.obj-2a88f8d8740806dea4b2818260d61c86.mesh"
+
+[deps]
+
+files=[ "res://.import/Chair.obj-2a88f8d8740806dea4b2818260d61c86.mesh" ]
+
+source_file="res://Chair.obj"
+dest_files=[ "res://.import/Chair.obj-2a88f8d8740806dea4b2818260d61c86.mesh", "res://.import/Chair.obj-2a88f8d8740806dea4b2818260d61c86.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
