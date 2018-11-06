@@ -241,7 +241,7 @@ void AIEmotion::_bind_methods(){
 	ADD_PROPERTY(PropertyInfo(Variant::REAL, "trust_disgust"), "setNothing","getTrustDisgust");
 	ADD_PROPERTY(PropertyInfo(Variant::REAL, "fear_anger"), "setNothing","getFearAnger");
 	ADD_PROPERTY(PropertyInfo(Variant::REAL, "surprise_anticipation"), "setNothing","getSurpriseAnticipation");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "e_threshhold"), "setEmotionThreshold", "getEmotionThreshold");
+	ADD_PROPERTY(PropertyInfo(Variant::REAL, "emotion_threshhold"), "setEmotionThreshold", "getEmotionThreshold");
 }
 
 void AIEmotion::setNothing(){

@@ -158,9 +158,9 @@ class AIEmotion : public Object {
 		 * \fn getEmotionThreshold
 		 * \brief gets the emotionThreshold value
 		 * \author Brandon Jin Yang Lim
-		 * \return value of e_threshhold
+		 * \return value of emotion_threshold
 		 ***********************************************/
-		double getEmotionThreshold(){return e_threshhold;}
+		double getEmotionThreshold(){return emotion_threshold;}
 		
 		/********************************************//**
 		 * \fn getDepthOfView
@@ -212,10 +212,10 @@ class AIEmotion : public Object {
 		/********************************************//**
 		 * \fn setEmotionThreshold
 		 * \brief sets threshold at which response is triggered
-		 * \param[in] e_threshhold Value to which the emotion threshold is to be set.
+		 * \param[in] emotion_threshold Value to which the emotion threshold is to be set.
 		 * \author Brandon Jin Yang Lim
 		 ***********************************************/
-		void setEmotionThreshold(double e_threshhold);
+		void setEmotionThreshold(double emotion_threshold);
 		
 		//set emotion levels (for use with generic constructor)
 		/********************************************//**
@@ -316,7 +316,7 @@ class AIEmotion : public Object {
 							double disgust_m,
 							double anger_m,
 							double anticipation_m,
-							double e_threshhold);
+							double emotion_threshold);
 	private:
 		//variable declaration for the emotions
 		//default values are 0 (neither one emotion nor the other).
