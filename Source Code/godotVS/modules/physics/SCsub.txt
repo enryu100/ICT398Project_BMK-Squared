@@ -1,0 +1,7 @@
+# SCub
+Import('env')
+
+env.add_source_files(env.modules_sources,"*.cpp") #add ll cpp files to the build
+
+env.Append(CPPPATH = "glad")
+env.Append(CPPPATH = "KHR")
