@@ -2,7 +2,7 @@
 #ifndef AIEMOTION_H
 #define AIEMOTION_H
 
-#include "reference.h"
+#include "object.h"
 
 class AIEmotion : public Object { 
 		GDCLASS(AIEmotion, Object);
