@@ -301,6 +301,10 @@ class AIEmotion : public Object {
 		 ***********************************************/
 		void setAnticipationModifier(double anticipation_m);
 		
+		/********************************************//**
+		 * @}
+		 ***********************************************/
+		
 		//constructor - generic
 		AIEmotion();
 		// overloaded - sets both in constructor
